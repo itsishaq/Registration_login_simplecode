@@ -16,7 +16,7 @@ def signin():
     f = open("Assignment.py",'r')
     info = f.read()
     if name in info:
-        return "Name Unavailable. Please Try Again"
+        return "Name Unavailable. Try Again !!"
     f.close()
     f = open("User_Data.txt",'w')
     info = info + " " +name + " " + password
@@ -32,11 +32,11 @@ def login():
     if Usr_name in info:
         index = info.index(Usr_name) + 1
         usr_password = info[index]
-        if usr_password == "ishaqRDJ66":
-            return "Welcome Back, " + Usr_name
+        if usr_password == password:
+            return "Welcome Back " + Usr_name
         else:
-            return "Password entered is wrong"
+            return "The entered password is wrong"
     else:
-        return "Name not found. Please Sign Up."
+        return "Name is unable to find. Please Sign Up again."
 
 print(choices())
